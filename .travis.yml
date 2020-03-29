@@ -10,8 +10,7 @@ jobs:
       name: "Jupiter Starter Sample: Gradle, Java and Junit"
       script: 
         - cd $TRAVIS_BUILD_DIR/junit5-jupiter-starter-gradle
-        #- git config --global push.default simple
         - export GIT_TAG=$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER
         - gradle clean build --console plain
-        # && ./gradlew test --console plain
+        - gradle test --console plain
 
