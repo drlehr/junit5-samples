@@ -12,5 +12,7 @@ jobs:
         - cd $TRAVIS_BUILD_DIR/junit5-jupiter-starter-gradle
         - export GIT_TAG=$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER
         - gradle clean build --console plain
+        - gradle test -- console plain
         - gradle clean test --console plain
+        - gradle build
 
